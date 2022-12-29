@@ -1,4 +1,4 @@
-import 'package:shopping_cart/shopping_cart.dart';
+// import 'package:shopping_cart/product.dart';
 import 'package:test/test.dart';
 
 void main() {
