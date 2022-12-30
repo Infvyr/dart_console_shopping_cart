@@ -15,7 +15,7 @@ Product? chooseProduct() {
     }
   }
 
-  print('\n------------------------\nInvalid input! Choose a product from the menu.\n------------------------\n');
+  print('\n----------------------------------------------------\nInvalid input! Choose a product from the menu.\n----------------------------------------------------\n');
 
   return null;
 }

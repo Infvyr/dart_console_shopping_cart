@@ -11,9 +11,7 @@ class Item {
 
   double get price => product.price * quantity;
 
-  String displayItem() => '$quantity x ${product.name}: \$${price.toStringAsFixed(2)}';
+  String displayItemInCart() => '${product.name} x $quantity = \$${price.toStringAsFixed(2)}';
 
-  @override
-  String toString() => '$quantity x ${product.name} = \$${price.toStringAsFixed(2)}';
-
+  String displayItemRemove() => 'ID: ${product.id} => ${product.name} x $quantity = \$${price.toStringAsFixed(2)}';
 }

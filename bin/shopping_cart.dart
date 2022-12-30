@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:shopping_cart/cart.dart';
-import 'package:shopping_cart/helpers.dart';
+import 'package:shopping_cart/menu.dart' as menu;
 
 void main() {
   print('\n--------------------------------\nWelcome to the shopping cart!\n--------------------------------\n');
@@ -16,25 +16,19 @@ void main() {
 
     switch(input) {
       case '1':
-        final product = chooseProduct();
-        if(product != null) {
-          cart.addProduct(product);
-        }
-        print('\n------------------------\nAdded $product to cart\n--------------------------------\n');
+        menu.addItem(cart);
         break;
       case '2':
-        print(cart.displayCart());
+        menu.viewCart(cart);
         break;
       case '3':
-        /// TODO: Drop an item from the cart
-        print('Remove an item from the cart');
+        menu.dropItem(cart);
         break;
       case '4':
-        print(cart.clearCart());
+        menu.clearCart(cart);
         break;
       case '5':
-        print('Checkout');
-        /// TODO: Checkout
+        menu.checkout(cart);
         break;
       case '6':
         print('Exit');

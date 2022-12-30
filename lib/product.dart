@@ -11,4 +11,5 @@ class Product {
 
   String get displayProduct => '($firstLetterOfProductName)${name.substring(1)}: \$$price';
   String get firstLetterOfProductName => name.substring(0, 1).toLowerCase();
+  String get productName => name;
 }
