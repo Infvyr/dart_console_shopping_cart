@@ -10,7 +10,7 @@ void main() {
 
   while(true) {
     print('What would you like to do?');
-    stdout.write('1. Add an item\n2. View cart\n3. Drop an item\n4. Clear cart\n5. Checkout\n6.Exit\n> ');
+    stdout.write('1. Add an item\n2. View cart\n3. Drop an item\n4. Clear cart\n5. Checkout\nq. Quit\n> ');
 
     final input = stdin.readLineSync();
 
@@ -28,10 +28,9 @@ void main() {
         menu.clearCart(cart);
         break;
       case '5':
-        menu.checkout(cart);
+        menu.printCheckout(cart);
         break;
-      case '6':
-        print('Exit');
+      case 'q':
         exit(0);
       default:
         print('Invalid input! Choose an option from the menu.');

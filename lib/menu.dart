@@ -9,7 +9,7 @@ void addItem(Cart cart) {
 
   if(product != null) {
     cart.addProduct(product);
-    print('\n--------------------------------\n$productName has been added to your cart!\n--------------------------------\n');
+    print('\n-------------------------------------------\n$productName has been added to your cart!\n-------------------------------------------\n');
   }
 }
 
@@ -48,7 +48,8 @@ void clearCart(Cart cart) {
   print(cart.clearCart());
 }
 
-void checkout(Cart cart) {
-  /// TODO: Checkout
-
+void printCheckout(Cart cart) {
+  if(checkout(cart)) {
+    return;
+  }
 }

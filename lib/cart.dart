@@ -8,6 +8,7 @@ class Cart {
 
   String get totalPriceString => '\$${totalPrice().toStringAsFixed(2)}';
   Iterable<Item> get itemsValues => _items.values.toList();
+  bool get isEmpty => _items.isEmpty;
 
   double totalPrice() => _items.values.fold(0, (total, item) => total + item.price);
 
