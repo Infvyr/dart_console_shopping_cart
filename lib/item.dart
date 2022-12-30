@@ -10,4 +10,10 @@ class Item {
   final int quantity;
 
   double get price => product.price * quantity;
+
+  String displayItem() => '$quantity x ${product.name}: \$${price.toStringAsFixed(2)}';
+
+  @override
+  String toString() => '$quantity x ${product.name} = \$${price.toStringAsFixed(2)}';
+
 }

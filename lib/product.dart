@@ -9,6 +9,6 @@ class Product {
   final double price;
   final int id;
 
-  String get displayName => '($firstLetter)${name.substring(1)}: \$$price';
-  String get firstLetter => name.substring(0, 1).toLowerCase();
+  String get displayProduct => '($firstLetterOfProductName)${name.substring(1)}: \$$price';
+  String get firstLetterOfProductName => name.substring(0, 1).toLowerCase();
 }
